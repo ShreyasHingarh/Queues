@@ -7,41 +7,42 @@ namespace Queues
     class QueueWithArray <T>
     {
         public int Count { get; private set; }
-        private T[] data = new T[5];
+        private T[] data = new T[3];
         private int headIndex;
         private int tailIndex;
 
         public void Enqueue(T value)
-        { 
+        {
+            tailIndex++;
 
-            if(headIndex >= 1)
-            {
-                headIndex--;
-            }
-            if(tailIndex == headIndex - 1|| tailIndex == data.Length )
+            if ((tailIndex == headIndex || tailIndex == data.Length) && Count > 0)
             {
                 Resize(data.Length * 2);
             }
             if(tailIndex > data.Length - 1)
             {
-                tailIndex = tailIndex % data.Length;
+                tailIndex = 0;
             }
             data[tailIndex] = value;
-            tailIndex++;
+          
             Count++;
         }
         public void Dequeue()
         {
             headIndex++;
-            if(headIndex > data.Length)
+            
+            if (headIndex > data.Length)
             {
                 headIndex = 0;
             }
-            if(0.25f * data.Length == Count)
+            if( data.Length /4== Count)
             {
-                Resize((int)(data.Length * 0.5f));
+                Count--;
+                Resize(data.Length /2);
+                return;
             }
             Count--;
+
         }
         public T Peek() 
         {
@@ -51,10 +52,29 @@ namespace Queues
         private void Resize(int size)
         {
             T[] temp = new T[size];
-            for (int i = 0; i < data.Length; i++)
+            if(headIndex < tailIndex)
             {
-                temp[i] = data[i];
+                int index = 0;
+                for (int i = headIndex; i < tailIndex; i++)
+                {
+                    temp[index] = data[i];
+                    index++;
+                }
             }
+            if(headIndex > tailIndex)
+            {
+                for(int i = headIndex;i < data.Length;i++)
+                {
+                    temp[i] = data[i];
+                }
+                for(int i = 0;i < tailIndex;i++)
+                {
+                    temp[i] = data[i];
+                }
+                
+            }
+            tailIndex = Count ;
+            headIndex = 0;
             data = temp;
         }
        

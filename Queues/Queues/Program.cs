@@ -7,13 +7,14 @@ namespace Queues
         static void Main(string[] args)
         {
             QueueWithArray<int> queue = new QueueWithArray<int>();
-            for(int i = 0;i < 31;i++)
-            {
-                queue.Enqueue(i);
-                
-            }
-            ;
-
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            queue.Enqueue(4);
+            queue.Dequeue();
+            queue.Enqueue(5);
+            queue.Enqueue(6);
+            queue.Enqueue(7);
         }
     }
 }
