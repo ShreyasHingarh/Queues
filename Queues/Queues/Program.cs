@@ -15,6 +15,7 @@ namespace Queues
             queue.Enqueue(5);
             queue.Enqueue(6);
             queue.Enqueue(7);
+            queue.Enqueue(8);
         }
     }
 }
