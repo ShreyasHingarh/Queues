@@ -1,21 +1,22 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shreyas.hingarh\\Source\\Repos\\Queues\\Queues\\Queues\\Queues.csproj": {}
+    "C:\\Users\\shreyas.hingarh\\source\\repos\\Queues\\Queues\\Queues\\Queues.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shreyas.hingarh\\Source\\Repos\\Queues\\Queues\\Queues\\Queues.csproj": {
+    "C:\\Users\\shreyas.hingarh\\source\\repos\\Queues\\Queues\\Queues\\Queues.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shreyas.hingarh\\Source\\Repos\\Queues\\Queues\\Queues\\Queues.csproj",
+        "projectUniqueName": "C:\\Users\\shreyas.hingarh\\source\\repos\\Queues\\Queues\\Queues\\Queues.csproj",
         "projectName": "Queues",
-        "projectPath": "C:\\Users\\shreyas.hingarh\\Source\\Repos\\Queues\\Queues\\Queues\\Queues.csproj",
+        "projectPath": "C:\\Users\\shreyas.hingarh\\source\\repos\\Queues\\Queues\\Queues\\Queues.csproj",
         "packagesPath": "C:\\Users\\shreyas.hingarh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shreyas.hingarh\\Source\\Repos\\Queues\\Queues\\Queues\\obj\\",
+        "outputPath": "C:\\Users\\shreyas.hingarh\\source\\repos\\Queues\\Queues\\Queues\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\shreyas.hingarh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

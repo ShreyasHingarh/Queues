@@ -14,7 +14,7 @@ namespace Queues
         {
             get
             { 
-                if(tailIndex > headIndex || (tailIndex == 0 && headIndex == 0))
+                if(tailIndex > headIndex || (tailIndex == headIndex))
                 {
                     return tailIndex - headIndex;
                 }
@@ -48,7 +48,7 @@ namespace Queues
             {
                 headIndex = 0;
             }
-            if( data.Length /4== Count)
+            if( data.Length /4== Count && data.Length > 1)
             {
                 
                 Resize(data.Length /2);
@@ -67,7 +67,11 @@ namespace Queues
             T[] temp = new T[size];
 
             int index = 0;
-            if (headIndex < tailIndex)
+            if(headIndex == tailIndex)
+            {
+
+            }
+            else if (headIndex < tailIndex)
             {
                 for (int i = headIndex; i < tailIndex; i++)
                 {
